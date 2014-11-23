@@ -1,0 +1,15 @@
+<template name="login">
+
+    <div class="login ui-text--center">
+
+        {{#unless currentUser}}
+            <p>{{> loginButton service='github'}}</p>
+            <p>{{> loginButton service='twitter'}}</p>
+            <p>{{> loginButton service='google'}}</p>
+        {{else}}
+            <p class="ui-text--light">You are already logged in</p>
+        {{/unless}}
+
+    </div>
+
+</template>

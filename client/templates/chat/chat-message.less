@@ -1,0 +1,46 @@
+@import '/client/less/import';
+
+.chat-message {
+    position: relative;
+    margin: 11px 0;
+
+    &-inner {
+        display: inline-block;
+        padding: 5px 8px;
+        max-width: 70%;
+        text-align: left;
+        word-break: break-all;
+        border: 1px solid rgba(0, 0, 0, .15);
+        border-bottom-color: rgba(0, 0, 0, .25);
+
+        .border-radius(3px);
+        .box-shadow(0 1px 0 rgba(0, 0, 0, 0.05));
+        .background-image(linear-gradient(bottom, @color-chat-message, lighten(@color-chat-message, 5%)));
+    }
+
+    &-date {
+        text-align: center;
+        font-weight: 600;
+        font-size: 11px;
+        height: 12px;
+        color: @color-text--light;
+    }
+
+    &--unsent {
+        opacity: 0.75;
+    }
+
+    &--out {
+        text-align: right;
+    }
+
+    &--out &-inner {
+        .background-image(linear-gradient(bottom, @color-chat-message--out, lighten(@color-chat-message--out, 5%)));
+    }
+
+    .user-photo {
+        position: absolute;
+        left: -(@size-user-photo--medium + 6);
+        top: -1px;
+    }
+}

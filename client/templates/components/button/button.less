@@ -1,0 +1,33 @@
+@import '/client/less/import';
+
+.button {
+    width: 250px;
+    margin: 0.2em 0;
+    padding: 1.6em 0 1.4em 0;
+    background: transparent;
+    border: 0;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    color: @color-text--light;
+    text-transform: uppercase;
+    letter-spacing: 0.19em;
+    cursor: pointer;
+    opacity: 0.75;
+
+    .border-radius(2px);
+    .transition(opacity 150ms linear);
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:active {
+        .translateY(1);
+    }
+
+    &--light {
+        background: white;
+        color: rgba(65, 65, 73, 1);
+    }
+}

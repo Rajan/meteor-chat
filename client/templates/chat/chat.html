@@ -1,0 +1,25 @@
+<template name="chat">
+
+    <div class="chat wrapper {{class}}">
+
+        <div class="chat-messages">
+
+            {{#each messages}}
+                {{> chatMessage}}
+            {{else}}
+                <p class="ui-text--large ui-text--center ui-text--light">There's no messages</p>
+            {{/each}}
+
+            {{scrollBottom}}
+
+        </div>
+
+        <div class="chat-footer application-footer">
+            <form data-action="messages:create" class="wrapper">
+                <input type="text" class="chat-footer-textbox" name="message" autofocus="autofocus" autocomplete="off" placeholder="Write something..." tabindex="1" maxlength="1024" />
+            </form>
+        </div>
+
+    </div>
+
+</template>

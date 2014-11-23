@@ -1,0 +1,11 @@
+@import '/client/less/import';
+
+.keyframes(~'appear, 0% { transform: scale(1.15, 0.7); opacity: 0; } 100%{ transform: scale(1); opacity: 1; }');
+
+.animation-appear {
+    .animation-duration(300ms);
+    .animation-name(appear);
+    .animation-fill-mode(forwards);
+    .animation-timing-function(cubic-bezier(0.3, 1.25, .25, 1.2));
+    .transform-origin(50% 75%);
+}

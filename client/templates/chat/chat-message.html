@@ -1,0 +1,19 @@
+<template name="chatMessage">
+
+    {{#if showDate}}
+        <div class="chat-message-date" data-livestamp="{{createdAt}}"></div>
+    {{/if}}
+
+    <div class="chat-message {{class}}">
+
+        {{#unless isAuthor}}
+            {{#userLink userId=createdBy title=title}}
+                {{> userPhoto userId=createdBy size='medium' darkborder=true}}
+            {{/userLink}}
+        {{/unless}}
+
+        <div class="chat-message-inner" title="{{title}}">{{value}}</div>
+
+    </div>
+
+</template>

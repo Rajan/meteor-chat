@@ -1,0 +1,45 @@
+<template name="application">
+
+    {{> lightbox}}
+
+    <div class="application">
+
+        <div class="application-header">
+
+            <div class="wrapper">
+
+                <a href="{{pathFor 'readme'}}">Read Me</a>
+                <a href="#" data-action="rooms:create">Create a room</a>
+
+                <div class="ui--right">
+
+                    {{#if currentUser}}
+
+                        {{#userLink userId=currentUser._id}}
+                            {{> userPhoto userId=currentUser._id size='small'}}
+                            {{currentUser.profile.username}}
+                        {{/userLink}}
+
+                        <a href="#" data-action="logout">Logout</a>
+
+                    {{else}}
+                        <a href="#" rel="lightbox" data-lightbox="login">Login</a>
+                    {{/if}}
+
+                    <a href="#" rel="lightbox" data-lightbox="about" class="fa fa-info-circle"></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="application-main">
+
+            {{> yield}}
+
+        </div>
+
+    </div>
+
+</template>

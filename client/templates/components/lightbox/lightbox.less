@@ -1,0 +1,29 @@
+@import '/client/less/import';
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 65, 73, 0.9);
+    z-index: 100;
+    color: #FFF;
+
+    .display(flex);
+    .align-self(center);
+    .justify-content(center);
+
+    &-inner {
+      text-align: center;
+      margin: auto;
+      opacity: 0;
+      color: @color-text--light;
+
+      .animation-appear;
+
+      a:hover {
+        color: #FFF;
+      }
+    }
+}
