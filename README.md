@@ -3,7 +3,7 @@ Meteor.js Chat
 
 Facebook-like chat application built with Meteor.js
 
-##Quick exemple
+##Quick example
 
 http://meteor-chat.fstgerm.com/6LgmGjA
 
