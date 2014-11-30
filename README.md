@@ -1,7 +1,7 @@
 Meteor.js Chat
 ========
 
-Facebook-like chat application built with Meteor.js
+Chat application built on Meteor.js
 
 ##Quick example
 
