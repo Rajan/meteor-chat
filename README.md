@@ -3,10 +3,6 @@ Meteor.js Chat
 
 Chat application built on Meteor.js
 
-##Quick example
-
-http://meteor-chat.fstgerm.com/6LgmGjA
-
 ##Packages used
 
 * accounts-github
