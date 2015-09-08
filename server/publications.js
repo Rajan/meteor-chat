@@ -9,7 +9,12 @@ Meteor.publish('room', function(id) {
             collection: Messages,
             mappings: [{
                 key: 'createdBy',
-                collection: Meteor.users
+                collection: Meteor.users,
+                options: {
+                    fields: {
+                        profile: 1
+                    }
+                }
             }]
         }]
     });
